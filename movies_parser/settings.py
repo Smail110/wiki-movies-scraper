@@ -23,7 +23,7 @@ ROBOTSTXT_OBEY = False
 
 # Concurrency and throttling settings
 #CONCURRENT_REQUESTS = 16
-CONCURRENT_REQUESTS_PER_DOMAIN = 5
+CONCURRENT_REQUESTS_PER_DOMAIN = 10
 DOWNLOAD_DELAY = 0.2
 
 # Disable cookies (enabled by default)
@@ -91,6 +91,13 @@ FEEDS = {
         "format": "csv",
         "encoding": "utf-8",
         "overwrite": True,
-        "fields": ["title", "genres", "director", "country", "year"],
+        "fields": [
+            "title",
+            "genres",
+            "director",
+            "country",
+            "year",
+            "imdb_rating",
+        ],
     }
 }

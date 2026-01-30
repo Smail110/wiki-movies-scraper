@@ -1,29 +1,41 @@
-## Wiki Movies Scrapy Parser
+## Wiki Movies Scrapy Parser + IMDb
 
-Парсер на Scrapy, который собирает данные о фильмах из русской Википедии и сохраняет результат в CSV.
+Парсер на **Scrapy**, который:
+
+- собирает данные о фильмах из **Википедии**;
+- при наличии ссылки на **IMDb** переходит на страницу фильма и извлекает **рейтинг IMDb**;
+- сохраняет результат в формате **CSV**.
+
+---
 
 ### Собираемые поля
-- title
-- genres
-- director
-- country
-- year
+
+- `title` — название фильма  
+- `genres` — жанры  
+- `director` — режиссёр  
+- `country` — страна  
+- `year` — год выпуска  
+- `imdb_rating` — рейтинг IMDb  
+
+---
 
 ### Установка
+
 ```bash
 pip install -r requirements.txt
-````
+```
+---
 ### Запуск
 ```
 scrapy crawl wiki_movies
 ```
-## `requirements.txt`
-
-```txt
+---
+### requirements.txt
+```
 Scrapy==2.14.1
 ```
-### Пример результата
-
-Пример сформированного файла с результатами парсинга находится в:
-
-`movies_parser/movies.csv`
+### Результат
+После запуска будет создан файл:
+```
+movies.csv
+```
