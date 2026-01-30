@@ -30,4 +30,4 @@ class MovieItem(scrapy.Item):
     year = scrapy.Field()
 
     # Рейтинг IMDb (заполняется на втором шаге)
-    #imdb_rating = scrapy.Field()
+    imdb_rating = scrapy.Field()
